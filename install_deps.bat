@@ -1,0 +1,2 @@
+pip install websockets %*
+pause
