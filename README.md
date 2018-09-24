@@ -6,10 +6,9 @@ You can create streams with Robots (movable cameras with TTS), that's our specia
 
 We have a system called funbits that lets the streamers monetize their streams.
 
+Note: This repo is for desktop streams. If you are making a robot, you need to use a different project, see: https://github.com/robotstreamer/robotstreamer
 
-This repo is for desktop streams.
-
-If you are making a robot, see: https://github.com/robotstreamer/robotstreamer
+<h2>Setting up Desktop Stream</h2>
 
 You'll need two id's from MrArron on the discord server:
 https://discord.gg/n6B7ymy
