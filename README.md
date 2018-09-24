@@ -11,6 +11,8 @@ This repo is for desktop streams.
 
 If you are making a robot, see: https://github.com/robotstreamer/robotstreamer
 
+You'll need two id's from MrArron on the discord server:
+https://discord.gg/n6B7ymy
 
 
 install python-3.6.6-amd64.exe or similar
