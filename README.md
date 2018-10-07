@@ -8,6 +8,9 @@ We have a system called funbits that lets the streamers monetize their streams.
 
 Note: This repo is for desktop streams. If you are making a robot, you need to use a different project, see: https://github.com/robotstreamer/robotstreamer
 
+Note: If you are using OBS and you have a 64bit computer, make sure you have 64bit OBS.
+
+
 <h2>Setting up Desktop Stream</h2>
 
 You'll need two id's from MrArron on the discord server:
