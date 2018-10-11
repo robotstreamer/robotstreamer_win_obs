@@ -39,7 +39,8 @@ parser.add_argument('--stream-key', default="123")
 parser.add_argument('--straight-speed', type=int, default=255)
 parser.add_argument('--turn-speed', type=int, default=255)
 parser.add_argument('--api-url', default="http://api.robotstreamer.com:8080")
-
+parser.add_argument('--play-with-ffplay', dest='play_with_ffplay', action='store_true')
+parser.set_defaults(play_with_ffplay=False)
 
 commandArgs = parser.parse_args()
 print(commandArgs)
@@ -120,24 +121,35 @@ def espeakWinOBS(hardwareNumber, message, voice):
                         ftxt.write(message)
                         ftxt.close()
 
-                        cmd = 'espeak.exe -w %s -v%s+f%d -s%s -p%s -f %s' % (wavFile, voice, commandArgs.voice_number, ttsSpeed, ttsPitch, messageFile)
-                        print("--------------", cmd)
-                        os.system(cmd)
+                        if commandArgs.play_with_ffplay:
+						
+                            print("using espeak and ffplay")
+                            cmd = 'espeak.exe -w %s -v%s+f%d -s%s -p%s -f %s' % (wavFile, voice, commandArgs.voice_number, ttsSpeed, ttsPitch, messageFile)
+                            print(cmd)
+                            os.system(cmd)
 
 
-                        cropResult = os.system("ffmpeg -i %s -ss 0 -to %d -c copy %s" % (wavFile, maximumTTSTime, croppedWavFile))
-                        print("crop result code", cropResult)
-                        if cropResult == 0:
+                            cropResult = os.system("ffmpeg -i %s -ss 0 -to %d -c copy %s" % (wavFile, maximumTTSTime, croppedWavFile))
+                            print("crop result code", cropResult)
+                            if cropResult == 0:
                                     print("play cropped")
                                     os.system('ffplay.exe %s -autoexit -nodisp -volume %s' % (croppedWavFile, ttsVolume))
                                     os.remove(croppedWavFile)
-                        else:
+                            else:
                                     print("play full file")
                                     os.system('ffplay.exe %s -autoexit -nodisp -volume %s' % (wavFile, ttsVolume))                             
+									
+                            os.remove(wavFile)
 
+                        else:
+						
+                            print("using just espeak")
+                            cmd = 'espeak.exe -f %s' % messageFile
+                            print(cmd)
+                            os.system(cmd)
+						
             
                         os.remove(tempFilePath)
-                        os.remove(wavFile)
                         os.remove(messageFile)
 
 
