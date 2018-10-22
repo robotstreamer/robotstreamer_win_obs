@@ -16,7 +16,9 @@ Note: If you are using OBS and you have a 64bit computer, make sure you have 64b
 Visit www.robotstreamer.com/new_robot.html to get stream key and id's
 
 You'll need to specify the stream key as a command line argument for send_video.py and controller.py. It's like this:
+
 --stream-key YOURKEY
+
 
 
 https://discord.gg/n6B7ymy
