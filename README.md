@@ -1,8 +1,7 @@
 RobotStreamer is a low latency live streaming platform. Stream from you desktop. Connect your movable cameras with TTS (robots) to RobotStreamer.com.
 
-test
-
 Broadcasters make the rules for their channels. Unlike most platforms, RobotStreamer is open to just about any content. Just maintain basic ethical decency, keep it legal, and keep it entertaining. For language, it's up to the broadcaster to decide how they want to moderate if at all.
+
 
 You can create streams with Robots (movable cameras with TTS), that's our specialty, and you can also create tradional live IRL streams or game streams from the desktop. We currently use a different protocol than most live streaming platforms for lower latency.
 
@@ -12,19 +11,12 @@ Note: This repo is for desktop streams. If you are making a robot, you need to u
 
 Note: If you are using OBS and you have a 64bit computer, make sure you have 64bit OBS.
 
-If you have any questions, check out the discord server:
-https://discord.gg/n6B7ymy
 
 <h2>Setting up Desktop Stream</h2>
 
-You'll need robot id, camera id, and stream key. After registering at robotstreamer.com (if needed) and logging in, you can visit this link to create your new stream. You'll need to give it a name that identifies the stream, like JohnCam for example.
+You'll need two id's from MrArron on the discord server:
+https://discord.gg/n6B7ymy
 
-http://www.robotstreamer.com/new_stream.html
-
-
-Save all the id's and stream key.
-
-Now you can start installing:
 
 install python-3.6.6-amd64.exe or similar
 run install_deps.bat #it does (pip install websockets)
