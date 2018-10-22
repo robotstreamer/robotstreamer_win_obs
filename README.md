@@ -10,6 +10,10 @@ Note: This repo is for desktop streams. If you are making a robot, you need to u
 
 Note: If you are using OBS and you have a 64bit computer, make sure you have 64bit OBS.
 
+Here's where our community hangs out:
+https://discord.gg/n6B7ymy
+
+
 
 <h2>Setting up Desktop Stream</h2>
 
@@ -21,7 +25,6 @@ You'll need to specify the stream key as a command line argument for send_video.
 
 
 
-https://discord.gg/n6B7ymy
 
 
 install python-3.6.6-amd64.exe or similar
