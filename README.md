@@ -10,7 +10,7 @@ Note: This repo is for desktop streams. If you are making a robot, you need to u
 
 Note: If you are using OBS and you have a 64bit computer, make sure you have 64bit OBS.
 
-Here's where our community hangs out:
+Here's where our community hangs out. If you have any questions, this is the place to go:
 https://discord.gg/n6B7ymy
 
 
