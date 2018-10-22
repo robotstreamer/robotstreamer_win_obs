@@ -10,12 +10,19 @@ Note: This repo is for desktop streams. If you are making a robot, you need to u
 
 Note: If you are using OBS and you have a 64bit computer, make sure you have 64bit OBS.
 
+If you have any questions, check out the discord server:
+https://discord.gg/n6B7ymy
 
 <h2>Setting up Desktop Stream</h2>
 
-You'll need two id's from MrArron on the discord server:
-https://discord.gg/n6B7ymy
+You'll need robot id, camera id, and stream key. After registering at robotstreamer.com (if needed) and logging in, you can visit this link to create your new stream. You'll need to give it a name that identifies the stream, like JohnCam for example.
 
+http://www.robotstreamer.com/new_stream.html
+
+
+Save all the id's and stream key.
+
+Now you can start installing:
 
 install python-3.6.6-amd64.exe or similar
 run install_deps.bat #it does (pip install websockets)
