@@ -15,7 +15,10 @@ Note: If you are using OBS and you have a 64bit computer, make sure you have 64b
 
 <h2>Setting up Desktop Stream</h2>
 
+To create a new stream, first make sure you are logged in to www.robotstreamer.com. You need to name the stream, get your id's and stream key. You can do that at the following link. Fill in the name of your stream, like JohnCam, is will show up as a stream under your user on robotstreamer.com.
+
 http://www.robotstreamer.com/new_stream.html
+
 
 
 
