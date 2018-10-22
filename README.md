@@ -1,9 +1,6 @@
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-
 RobotStreamer is a low latency live streaming platform. Stream from you desktop. Connect your movable cameras with TTS (robots) to RobotStreamer.com.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Broadcasters make the rules for their channels. Unlike most platforms, RobotStreamer is open to just about any content. Just maintain basic ethical decency, keep it legal, and keep it entertaining. For language, it's up to the broadcaster to decide how they want to moderate if at all.
 
