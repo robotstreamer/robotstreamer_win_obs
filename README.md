@@ -17,7 +17,7 @@ https://discord.gg/n6B7ymy
 
 <h2>Setting up Desktop Stream</h2>
 
-Visit www.robotstreamer.com/new_robot.html to get stream key and id's
+Visit www.robotstreamer.com/new_stream.html to get stream key and id's
 
 You'll need to specify the stream key as a command line argument for send_video.py and controller.py. It's like this:
 
