@@ -14,8 +14,12 @@ Here's where our community hangs out. If you have any questions, this is the pla
 https://discord.gg/n6B7ymy
 
 
+<h2> Instructions on YouTube </h2>
+Note: there's a video version of istructions below here: https://youtu.be/YnOzh_r9HhA
 
-<h2>Setting up Desktop Stream</h2>
+
+<h2> Instructions for Setting up Desktop Stream</h2>
+
 
 Visit www.robotstreamer.com/new_stream.html to get stream key and id's
 
