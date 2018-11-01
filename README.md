@@ -15,7 +15,7 @@ https://discord.gg/n6B7ymy
 
 
 <h2> Instructions on YouTube </h2>
-Note: there's a video version of istructions below here: https://youtu.be/YnOzh_r9HhA
+Note: there's a video version of istructions below here: https://youtu.be/h0bJ40JYYYc
 
 
 <h2> Instructions for Setting up Desktop Stream</h2>
