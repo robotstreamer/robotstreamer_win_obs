@@ -35,6 +35,7 @@ install python-3.6.6-amd64.exe or similar
 run install_deps.bat #it does (pip install websockets)
 
 install obs-virtualcam (OBS-VirtualCam1.2.1.zip)
+https://github.com/CatxFish/obs-virtual-cam/releases
 
 	1.Unzip OBS-VirtualCam1.2.1.zip and put it to your obs-studio install folder
 	
