@@ -124,7 +124,7 @@ def espeakWinOBS(hardwareNumber, message, voice):
                         if commandArgs.play_with_ffplay:
 						
                             print("using espeak and ffplay")
-                            cmd = 'espeak.exe -w %s -v%s+f%d -s%s -p%s -f %s' % (wavFile, voice, commandArgs.voice_number, ttsSpeed, ttsPitch, messageFile)
+                            cmd = 'espeak.exe -w %s -v%s+f%d -s%s -p%s -f "%s"' % (wavFile, voice, commandArgs.voice_number, ttsSpeed, ttsPitch, messageFile)
                             print(cmd)
                             os.system(cmd)
 
@@ -144,7 +144,7 @@ def espeakWinOBS(hardwareNumber, message, voice):
                         else:
 						
                             print("using just espeak")
-                            cmd = 'espeak.exe -f %s' % messageFile
+                            cmd = 'espeak.exe -f "%s"' % messageFile
                             print(cmd)
                             os.system(cmd)
 						
