@@ -280,7 +280,7 @@ async def handleChatMessages():
             print("message:", j)
             if ('message' in j) and ('tts' in j) and j['tts'] == True and (j['robot_id'] == commandArgs.robot_id):
                 if len(messagesToTTS) <= 1 or (('tts_price' in j) and (j['tts_price'] >= 0.01)):
-                    messagesToTTS.append((j['message'], 1))
+                    messagesToTTS.append(j['message'])
             else:
                 print("error, message not valid:", j)
 
