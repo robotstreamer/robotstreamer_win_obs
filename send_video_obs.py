@@ -48,6 +48,7 @@ parser.add_argument('--screen-capture', dest='screen_capture', action='store_tru
 parser.set_defaults(screen_capture=False)
 parser.add_argument('--no-mic', dest='mic_enabled', action='store_false')
 parser.set_defaults(mic_enabled=True)
+parser.add_argument('--audio-rate', default=44100, type=int, help="this is 44100 or 48000 usually")
 parser.add_argument('--no-restart-on-video-fail', dest='restart_on_video_fail', action='store_false')
 parser.set_defaults(restart_on_video_fail=True)
 parser.add_argument('--no-audio-restart', dest='audio_restart_enabled', action='store_false')
@@ -59,6 +60,7 @@ parser.add_argument('--mic-channels', type=int, help='microphone channels, typic
 parser.add_argument('--audio-input-device', default='Microphone (HD Webcam C270)') # currently, this option is only used for windows screen capture
 parser.add_argument('--stream-key', default='hellobluecat')
 parser.add_argument('--ffmpeg-path', default='/usr/local/bin/ffmpeg')
+
 
 
 commandArgs = parser.parse_args()
@@ -120,8 +122,9 @@ def startAudioCaptureOBS():
     audioHost = audioEndpoint['host']
     audioPort = audioEndpoint['port']
 
-    audioCommandLine = ("ffmpeg -f dshow -i audio='OBS-Audio' -ar 48000 -ac 2 -f mpegts -codec:a mp2 -b:a 128k -muxdelay 0.001 http://%s:%s/%s/640/480/"
-    % ( audioHost, 
+    audioCommandLine = ("ffmpeg -f dshow -i audio='OBS-Audio' -ar %d -ac 2 -f mpegts -codec:a mp2 -b:a 128k -muxdelay 0.001 http://%s:%s/%s/640/480/"
+    % ( robotSettings.audio_rate,
+        audioHost, 
         audioPort,
         robotSettings.stream_key) )
 
