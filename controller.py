@@ -54,7 +54,7 @@ if commandArgs.type == "rsbot":
                            json.loads(commandArgs.left),
                            commandArgs.enable_ping_pong)
 
-elif commandArgs.type == "windows_interface":
+elif commandArgs.type == "windows":
             import windows_interface as interface
 
 elif commandArgs.type == "mac":
