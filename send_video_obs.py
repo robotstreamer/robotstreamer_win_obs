@@ -233,7 +233,7 @@ def main():
     # overrides command line parameters using config file
     print("args on command line:", commandArgs)
 
-    robot_util.sendCameraAliveMessage(apiServer, commandArgs.camera_id)
+    robot_util.sendCameraAliveMessage(apiServer, commandArgs.camera_id, commandArgs.stream_key)
 
     refreshFromOnlineSettings()
 
@@ -272,7 +272,7 @@ def main():
             time.sleep(20)
 
         if (count % robot_util.KeepAlivePeriod) == 0:
-            robot_util.sendCameraAliveMessage(apiServer, commandArgs.camera_id)
+            robot_util.sendCameraAliveMessage(apiServer, commandArgs.camera_id, commandArgs.stream_key)
 
         if robotSettings.camera_enabled:
 
