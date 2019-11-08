@@ -35,6 +35,8 @@ parser.set_defaults(enable_ping_pong=False)
 parser.add_argument('--tts-volume', type=int, default=80)
 parser.add_argument('--tts-speed', type=int, default=200)
 parser.add_argument('--type', default="rsbot")
+parser.add_argument('--no-tls-chat', dest='tls_chat', action='store_false')
+parser.set_defaults(tls_chat=True)
 parser.add_argument('--stream-key', default="123")
 parser.add_argument('--straight-speed', type=int, default=255)
 parser.add_argument('--turn-speed', type=int, default=255)
@@ -211,10 +213,14 @@ def getControlHost():
         print("response:", response)
         return json.loads(response)
             
-def getChatHost():
+def getChatHost(useTLS):
 
         #url = apiHost+'/v1/get_endpoint/rschat/'+commandArgs.robot_id #only for individual
-        url = apiHost+'/v1/get_endpoint/rschat/100' 
+
+        if useTLS:
+            url = apiHost+'/v1/get_endpoint/rschatssl/100' 
+        else:
+            url = apiHost+'/v1/get_endpoint/rschat/100' 
 
         response = robot_util.getWithRetry(url, secure=commandArgs.secure_cert)
         print("response:", response)
@@ -255,11 +261,15 @@ async def handleControlMessages():
 async def handleChatMessages():
 
 
-    chatGet = getChatHost()
+    chatGet = getChatHost(commandArgs.tls_chat)
     chatHost = chatGet['host']
     chatPort = chatGet['port']
 
-    url = 'ws://%s:%s' % (chatHost, chatPort)
+    if commandArgs.tls_chat:
+                url = 'wss://%s:%s' % (chatHost, chatPort)
+    else:
+                url = 'ws://%s:%s' % (chatHost, chatPort)  
+
     print("chat url:", url)
 
     async with websockets.connect(url) as websocket:
@@ -289,18 +299,16 @@ async def handleChatMessages():
 
             
 def startControl():
-    print("waiting a few seconds")
-    time.sleep(6) #todo: only wait as needed (wait for interent)
-
     while True:
                 print("starting control loop")
-                time.sleep(0.25)
                 try:
                             asyncio.new_event_loop().run_until_complete(handleControlMessages())
                 except:
                             print("error")
                             traceback.print_exc()
                 print("control event handler died")
+                print("sleeping")
+                time.sleep(6)
                 interface.movementSystemActive = False
 
 
